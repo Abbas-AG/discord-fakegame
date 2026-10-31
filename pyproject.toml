@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "Pretend to run a game so Discord detects it (e.g. for Discord quests)"
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python :: 3",

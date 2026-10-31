@@ -3,7 +3,7 @@
 Make Discord think you're playing a game, without installing it. Handy for
 Discord quests that require playing a game for a few minutes.
 
-Linux only. No dependencies beyond Python 3.8+.
+Linux only. No dependencies beyond Python 3.10+.
 
 > **Heads up:** this goes against Discord's Terms of Service. Use it at your
 > own risk; your account could be flagged.
