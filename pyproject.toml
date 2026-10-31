@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "discord-fakegame"
+dynamic = ["version"]
+description = "Pretend to run a game so Discord detects it (e.g. for Discord quests)"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+]
+
+[project.scripts]
+fakegame = "fakegame:main"
+
+[tool.setuptools]
+py-modules = ["fakegame"]
+
+[tool.setuptools.dynamic]
+version = { attr = "fakegame.__version__" }
