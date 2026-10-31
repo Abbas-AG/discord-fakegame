@@ -55,3 +55,13 @@ def test_exe_names_skip_launchers_and_mac():
 
 def test_exe_names_keep_folder_but_block_escape():
     assert fakegame.exe_names(GAMES[4]) == ["win64/pathy.exe"]
+
+
+def test_console_snippet_for_unlisted_game():
+    js = fakegame.console_snippet(GAMES[2])
+    assert "__GAME__" not in js and "RUNNING_GAMES_CHANGE" in js
+    assert '"id": "3"' in js and '"exe": "Some RPC Game.exe"' in js
+
+
+def test_console_snippet_uses_listed_exe():
+    assert '"exe": "valorant.exe"' in fakegame.console_snippet(GAMES[3])
